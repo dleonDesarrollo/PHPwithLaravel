@@ -1,5 +1,6 @@
 <?php
-
+use AppHttpContrllersAuthRegisterController;
+use IlluminateSupportFacadesRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+Register web routes for your app's RouteServiceProvider 
+in a group containing the "web" middleware
+*/
+
+Route::get('/register', [RegisterController::class], 'create']);
+
+Route::post('/register', [RegisterController::class], 'store']);
+

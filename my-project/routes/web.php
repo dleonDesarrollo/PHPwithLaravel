@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Ruta de la página de inicio
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,6 +24,8 @@ Register web routes for your app's RouteServiceProvider
 in a group containing the "web" middleware
 */
 
-Route::get('/register', [RegisterController::class, 'create']);
+// Ruta para mostrar el formulario de registro
+Route::get('register', [RegisterController::class, 'create']);
 
-Route::post('/register', [RegisterController::class, 'store']);
+// Ruta para procesar el formulario de registro
+Route::post('register', [RegisterController::class, 'store']);

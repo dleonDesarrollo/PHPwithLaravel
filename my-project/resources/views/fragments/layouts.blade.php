@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portafolio</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <!-- Styles -->
     @vite(['resources/js/app.js'])
 </head>
 <body>
@@ -14,7 +14,5 @@
         @yield('content')
     </main>
     @include('fragments.footer')
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
 </body>
 </html>

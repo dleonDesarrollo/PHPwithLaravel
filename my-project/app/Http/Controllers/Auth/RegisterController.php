@@ -26,9 +26,20 @@ class RegisterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(RegistrationRequest $request)
     {
-        //
+        // La validación se maneja a través del parámtro RegistrationRequest
+
+        // Base de datos Insert
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            // Hash::make función entregada por Laravel para asegurar que la password se almacene de forma segura en la base de datos
+            'password' => Hash::make($request->password),
+        ]);
+
+        // Redirige a la página de inicio después de un registro exitoso
+        return redirect()->route('welcome');
     }
 
     /**

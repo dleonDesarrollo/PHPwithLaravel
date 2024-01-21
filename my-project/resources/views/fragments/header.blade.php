@@ -10,19 +10,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/') }}" :value="__('Welcome')"></a>
+                        <a class="nav-link" href="{{ url('/') }}">{{ __('header.welcome') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/about') }}" :value= "{{__('About')}}"></a>
+                        <a class="nav-link" href="{{ url('/about') }}">{{ __('header.about') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/contact') }}" :value= "__('Contact')"></a>
+                        <a class="nav-link" href="{{ url('/contact') }}">{{ __('header.contact') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/register') }}":value= "__('Register')"></a>
+                        <a class="nav-link" href="{{ url('/register') }}">{{ __('header.register') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/login') }}":value= "__('Log In')"></a>
+                        <a class="nav-link" href="{{ url('/login') }}">{{ __('header.login') }}</a>
                     </li>
                 </ul>
             </div>

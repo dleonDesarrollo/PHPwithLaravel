@@ -19,10 +19,10 @@
                         <a class="nav-link" href="{{ url('/contact') }}">{{ __('header.contact') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/register') }}">{{ __('header.register') }}</a>
+                        <a class="nav-link" href="{{ url('/auth/register') }}">{{ __('header.register') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/login') }}">{{ __('header.login') }}</a>
+                        <a class="nav-link" href="{{ url('/auth/login') }}">{{ __('header.login') }}</a>
                     </li>
                 </ul>
             </div>

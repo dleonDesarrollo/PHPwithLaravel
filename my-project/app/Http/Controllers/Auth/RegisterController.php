@@ -28,16 +28,16 @@ class RegisterController extends Controller
      */
     public function store(RegistrationRequest $request)
     {
-        // La validación se maneja a través del parámtro RegistrationRequest
-
-        // Base de datos Insert
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            // Hash::make función entregada por Laravel para asegurar que la password se almacene de forma segura en la base de datos
-            'password' => Hash::make($request->password),
-        ]);
-
+        /* La validación se maneja a través del parámtro RegistrationRequest
+        La función validated() se utiliza para obtener los datos validados de una solicitud 
+        HTTP después de pasar por las reglas de validación definidas en una clase 
+        de solicitud (Request).
+        Esta función está disponible dentro de los controladores 
+        después de que la solicitud haya sido validada.
+        Devuelve un array con los datos validados.
+        Si la validación falla, Laravel automáticamente redireccionará de 
+        vuelta con los errores de validación y los datos antiguos en la sesión.*/
+        $user = User::create($request->validated());
         // Redirige a la página de inicio después de un registro exitoso
         return redirect()->route('welcome');
     }

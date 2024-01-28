@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\RegisterRequest;
 
 class RegisterController extends Controller
 {
@@ -26,9 +27,9 @@ class RegisterController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(RegistrationRequest $request)
+    public function store(RegisterRequest $request)
     {
-        /* La validación se maneja a través del parámtro RegistrationRequest
+        /* La validación se maneja a través del parámtro RegisterRequest
         La función validated() se utiliza para obtener los datos validados de una solicitud 
         HTTP después de pasar por las reglas de validación definidas en una clase 
         de solicitud (Request).

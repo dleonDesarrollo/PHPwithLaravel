@@ -22,9 +22,9 @@ class RegisterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users|max:255',
-            'password' => 'required|string|min:8|confirmed',
+            'name' => 'required|string|max:255', // El campo 'name' es requerido, debe ser una cadena de texto y tener una longitud máxima de 255 caracteres.
+            'email' => 'required|email|unique:users|max:255', // El campo 'email' es requerido, debe ser una dirección de correo electrónico válida, única en la tabla de usuarios y tener una longitud máxima de 255 caracteres.
+            'password' => 'required|string|min:8|confirmed', // El campo 'password' es requerido, debe ser una cadena de texto con una longitud mínima de 8 caracteres y debe ser confirmado con un campo adicional 'password_confirmation'.            
         ];
     }
 }

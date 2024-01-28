@@ -42,4 +42,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    
+    public function setPasswordAttribute($value)
+    {
+        // Utilizamos Hash::make para hashear el valor de la contraseña recibido como parámetro $value
+        $this->attributes['password'] = Hash::make($value);
+        // Asignamos el valor hasheado al atributo 'password' del modelo actual
+    }
 }

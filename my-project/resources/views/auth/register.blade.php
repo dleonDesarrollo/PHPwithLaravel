@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <!-- Se utiliza old ej: {{ old('name') }} para repoblar el campo 
                     con el valor anterior después de una redirección con errores -->
-                    <form method="POST" action="{{ url('register') }}">
+                    <form method="POST" action="{{ url('/auth/register') }}">
                         @csrf
 
                         <div class="form-group mb-3">

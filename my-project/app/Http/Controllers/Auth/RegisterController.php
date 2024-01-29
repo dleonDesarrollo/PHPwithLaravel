@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\RegisterRequest;
+use App\Models\User;
 
 class RegisterController extends Controller
 {
@@ -40,7 +41,7 @@ class RegisterController extends Controller
         vuelta con los errores de validación y los datos antiguos en la sesión.*/
         $user = User::create($request->validated());
         // Redirige a la página de inicio después de un registro exitoso
-        return redirect()->route('welcome');
+        return redirect()->route('register');
     }
 
     /**

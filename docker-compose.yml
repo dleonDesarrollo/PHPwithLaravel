@@ -11,7 +11,7 @@ services:
       MYSQL_DATABASE: portphp
       MYSQL_PASSWORD: admin
     ports:
-      - "3307:3306"
+      - "3309:3306"
 
   myapp:
     image: docker.io/bitnami/laravel:10
